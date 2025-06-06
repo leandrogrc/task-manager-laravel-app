@@ -19,6 +19,6 @@ class DashboardController extends Controller
     {
         $tasks = Task::where('user_id', Auth::user()->id)->get();
         // Exibe a view dashboard.blade.php
-        return view('dashboard')->with('tasks', $tasks);;
+        return view('components.dashboard')->with('tasks', $tasks);
     }
 }

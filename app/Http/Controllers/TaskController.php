@@ -11,12 +11,12 @@ class TaskController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {                                // Auth::id()
-        $tasks = Task::where('user_id', Auth::user()->id)->get();
+    // public function index()
+    // {                                // Auth::id()
+    //     $tasks = Task::where('user_id', Auth::user()->id)->get();
 
-        return view('tasks')->with('tasks', $tasks);
-    }
+    //     return view('tasks')->with('tasks', $tasks);
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -62,9 +62,15 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Task $task)
     {
-        //
+        if ($task->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+        $request->validate(['task' => 'required|string']);
+        $task->update(['task' => $request->task]);
+        return redirect()->route('dashboard')->with('success', 'Tarefa atualizada com sucesso!');
     }
 
     /**

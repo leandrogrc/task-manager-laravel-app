@@ -12,10 +12,10 @@
 
 <body>
 
-    @include('partials.navbar')
+    @include('components.navbar')
 
     <main class="container my-4 vh-100">
-        @yield('content')
+        {{ $slot }}
     </main>
 
     <footer class="bg-light text-center py-3 mt-auto">

@@ -24,7 +24,7 @@ Route::prefix('auth')->controller(AuthController::class)->group(function () {
     Route::post('/logout', 'logout')->name('auth.logout');
 });
 
+Route::get('/tasks', [TaskController::class, 'index'])->middleware('auth')->name('tasks');
 Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store')->middleware('auth');
 Route::delete('/tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy')->middleware('auth');
-
-// Route::get('/tasks', [TaskController::class, 'index'])->middleware('auth')->name('tasks');
+Route::put('/tasks/{task}', [TaskController::class, 'update'])->name('tasks.update')->middleware('auth');
