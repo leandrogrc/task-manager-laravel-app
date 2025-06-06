@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">MeuApp</a>
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <i class="bi bi-check-circle-fill me-2"></i>TaskFlow
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
             <span class="navbar-toggler-icon"></span>
@@ -60,3 +62,16 @@
         </div>
     </div>
 </nav>
+
+<style>
+    :root {
+        --primary-color: #6c63ff;
+        --secondary-color: #4d44db;
+        --accent-color: #ff6584;
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        color: var(--primary-color) !important;
+    }
+</style>
