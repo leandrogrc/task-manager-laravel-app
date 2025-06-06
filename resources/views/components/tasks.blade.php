@@ -54,23 +54,31 @@
 <!-- Modal de Adição -->
 <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <form method="POST" action="{{ route('tasks.store') }}" class="modal-content border-0 shadow-lg">
-            <div class="modal-header border-0">
-                <h5 class="modal-title" id="addTaskModalLabel"><i class="bi bi-plus-circle me-2"></i>Nova Tarefa</h5>
+        <form method="POST" action="{{ route('tasks.store') }}" class="modal-content">
+            @csrf
+            <div class="modal-header">
+                <h5 class="modal-title" id="addTaskModalLabel">Adicionar Nova Tarefa</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
             </div>
             <div class="modal-body">
                 <div class="mb-3">
                     <label for="task" class="form-label">Descrição da Tarefa</label>
-                    <input type="text" name="task" id="task" class="form-control @error('task') is-invalid @enderror" value="{{ old('task') }}" required autofocus>
+                    <input
+                        type="text"
+                        name="task"
+                        id="task"
+                        class="form-control @error('task') is-invalid @enderror"
+                        value="{{ old('task') }}"
+                        required
+                        autofocus>
                     @error('task')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
             </div>
-            <div class="modal-footer border-0">
-                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-primary">Salvar</button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Salvar Tarefa</button>
             </div>
         </form>
     </div>
