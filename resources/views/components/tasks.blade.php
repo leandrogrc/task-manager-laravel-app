@@ -6,7 +6,8 @@
 @endif
 
 <!-- Botão para abrir o modal -->
-<div class="d-flex justify-content-end mb-4">
+<div class="d-flex justify-content-between mb-4">
+    <h3 class="mb-0">Tarefas</h3>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTaskModal">
         + Adicionar Task
     </button>
