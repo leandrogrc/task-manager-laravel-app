@@ -11,20 +11,26 @@ Route::get('/', function () {
 })->name('home');
 
 // Views Routes
-Route::get('/login', [AuthController::class, 'loginPage'])->name('auth.login');
-Route::get('/register', [AuthController::class, 'registerPage'])->name('auth.register');
-Route::get('/dashboard', [DashboardController::class, 'index'])
-    ->middleware('auth')
-    ->name('dashboard');
-
-// Requests Routes
-Route::prefix('auth')->controller(AuthController::class)->group(function () {
+Route::middleware('guest')->controller(AuthController::class)->group(function () {
+    Route::get('/login', 'loginPage')->name('auth.login');
     Route::post('/login', 'login')->name('auth.login.submit');
+    Route::get('/register', 'registerPage')->name('auth.register');
     Route::post('/register', 'store')->name('auth.register.submit');
-    Route::post('/logout', 'logout')->name('auth.logout');
 });
 
-Route::get('/tasks', [TaskController::class, 'index'])->middleware('auth')->name('tasks');
-Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store')->middleware('auth');
-Route::delete('/tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy')->middleware('auth');
-Route::put('/tasks/{task}', [TaskController::class, 'update'])->name('tasks.update')->middleware('auth');
+// PRIVATE ROUTES //
+Route::middleware('auth')->group(function () {
+
+    // Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // Logout
+    Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
+
+    Route::controller(TaskController::class)->group(function () {
+        Route::get('/tasks', 'index')->name('tasks');
+        Route::post('/tasks', 'store')->name('tasks.store');
+        Route::put('/tasks/{task}', 'update')->name('tasks.update');
+        Route::delete('/tasks/{task}', 'destroy')->name('tasks.destroy');
+    });
+});
