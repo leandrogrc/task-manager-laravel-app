@@ -9,10 +9,9 @@
 @endif
 
 <!-- Header e Botão de Adicionar -->
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <h2 class="mb-0">Tarefas</h2>
+<div class="d-flex justify-content-end mb-4">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTaskModal">
-        <i class="bi bi-plus-lg"></i>
+        + Adicionar Task
     </button>
 </div>
 
