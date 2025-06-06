@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -26,15 +25,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = $request->validate([
-            'name' => 'string|required',
-            'username' => 'string|required|unique:users,username',
-            'password' => 'string|required|min:6|confirmed',
-        ]);
-
-        User::create($user);
-
-        return redirect()->route('auth.login');
+        //
     }
 
     /**

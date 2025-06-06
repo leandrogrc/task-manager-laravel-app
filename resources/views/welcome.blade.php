@@ -76,7 +76,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <i class="bi bi-check-circle-fill me-2"></i>TaskFlow
@@ -97,9 +97,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#pricing">Planos</a>
-                    </li>
-                    <!-- Links adicionados aqui -->
-                    <li class="nav-item">
+                    </li> -->
+    <!-- Links adicionados aqui -->
+    <!-- <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
@@ -109,7 +109,8 @@
                 <a href="#cta" class="btn btn-primary ms-lg-3">Comece Agora</a>
             </div>
         </div>
-    </nav>
+    </nav> -->
+    @include('components.navbar')
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -425,7 +426,6 @@
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="/login" class="text-white text-decoration-none">Login</a></li>
                         <li class="mb-2"><a href="/register" class="text-white text-decoration-none">Registrar-se</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Recuperar senha</a></li>
                     </ul>
                 </div>
                 <!-- ... resto do footer ... -->
