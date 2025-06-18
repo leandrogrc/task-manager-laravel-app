@@ -23,12 +23,25 @@ Este projeto é um exemplo simples desenvolvido em PHP para fins de aprendizado 
     git clone <url-do-repositorio>
     ```
 2. Acesse a pasta do projeto:
+
     ```bash
-    cd teste
+    cd task-manager-laravel-app
     ```
-3. Configure o banco de dados conforme instruções no arquivo `database.sql`.
-4. Atualize as credenciais de conexão com o banco no arquivo de configuração.
-5. Execute os arquivos PHP em seu servidor local ou via CLI.
+
+    3. Execute as migrações e os seeders para criar e popular as tabelas do banco de dados:
+
+        ```bash
+        php artisan migrate --seed
+        ```
+
+    4. Por padrão, o sistema cria via Seed um usuário inicial com as seguintes credenciais:
+
+        - **Usuário:** admin
+        - **Senha:** password
+
+    5. Atualize as credenciais de conexão com o banco no arquivo de configuração, se necessário.
+
+    6. Execute os arquivos PHP em seu servidor local ou via CLI.
 
 ## Requisitos
 
