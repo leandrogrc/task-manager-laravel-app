@@ -1,6 +1,16 @@
 <x-base>
     @section('title', 'Entrar na Conta')
 
+    @if (session('success'))
+    <div class="alert alert-success alert-dismissible fade show border-0 shadow-sm" role="alert">
+        <div class="d-flex align-items-center">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <div>{{ session('success') }}</div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+    </div>
+    @endif
+
     <div class="auth-container d-flex justify-content-center align-items-center min-vh-100 mx-2">
         <div class="auth-card">
             <div class="auth-header text-center mb-4">
@@ -18,7 +28,7 @@
 
             <form method="POST" action="{{ route('auth.login.submit') }}" class="auth-form">
                 @csrf
-
+                @method('POST')
                 <div class="form-floating mb-3">
                     <input
                         type="text"

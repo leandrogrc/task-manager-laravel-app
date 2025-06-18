@@ -30,12 +30,13 @@ class AuthController extends Controller
 
         if (Auth::attempt($validated)) {
             $request->session()->regenerate();
-            return redirect('dashboard');
+            return redirect('dashboard')->with('success', "Usuário logado com sucesso!");
         }
 
-        // throw ValidationException::withMessages([
-        //     'credentials' => 'Credenciais incorretas'
-        // ]);
+        throw ValidationException::withMessages([
+            'username' => 'Credenciais incorretas',
+            'password' => 'Credenciais incorretas'
+        ]);
     }
 
     public function logout(Request $request)
@@ -43,7 +44,7 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/login');
+        return redirect('/login')->with('success', "Usuário saiu da conta");
     }
 
     public function store(Request $request)
@@ -56,6 +57,6 @@ class AuthController extends Controller
 
         User::create($user);
 
-        return redirect()->route('auth.login');
+        return redirect()->route('auth.login')->with('success', "Usuário criado com sucesso!");
     }
 }
