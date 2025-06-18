@@ -1,4 +1,4 @@
-# Projeto PHP Teste
+# Projeto PHP Task Manager
 
 Este projeto é um exemplo simples desenvolvido em PHP para fins de aprendizado e testes, com foco em gerenciamento de tarefas.
 
