@@ -1,14 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             <i class="bi bi-check-circle-fill me-2"></i>TaskFlow
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
                 @guest
@@ -24,7 +20,8 @@
                 </li>
                 @else
                 <!-- Usuário autenticado -->
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown d-flex flex-row align-items-center gap-2">
+                    <i class="bi bi-person-circle"></i>
                     <a
                         class="nav-link dropdown-toggle"
                         href="#"
