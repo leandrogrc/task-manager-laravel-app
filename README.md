@@ -1,6 +1,6 @@
-# Projeto PHP Task Manager
+# Projeto PHP/Laravel Task Manager
 
-Este projeto é um exemplo simples desenvolvido em PHP para fins de aprendizado e testes, com foco em gerenciamento de tarefas.
+Este projeto é um exemplo simples desenvolvido em PHP, Laravel, MariaDB para fins de aprendizado, com foco em gerenciamento de tarefas.
 
 ## Funcionalidades
 
@@ -9,12 +9,6 @@ Este projeto é um exemplo simples desenvolvido em PHP para fins de aprendizado 
 -   **Criar task:** Permite adicionar novas tarefas.
 -   **Editar task:** Possibilita modificar tarefas existentes.
 -   **Deletar task:** Remove tarefas do sistema.
-
-## Estrutura
-
--   Código-fonte em PHP organizado em módulos para usuários e tarefas.
--   README para documentação detalhada.
--   Scripts SQL para criação das tabelas necessárias (usuários e tarefas).
 
 ## Como usar
 
