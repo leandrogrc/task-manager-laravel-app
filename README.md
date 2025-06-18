@@ -18,41 +18,47 @@ Este projeto é um exemplo simples desenvolvido em PHP para fins de aprendizado 
 
 ## Como usar
 
-1. Clone o repositório:
+1.  Clone o repositório:
     ```bash
     git clone <url-do-repositorio>
     ```
-2. Acesse a pasta do projeto:
+2.  Acesse a pasta do projeto:
 
     ```bash
     cd task-manager-laravel-app
     ```
 
-    3. Execute as migrações e os seeders para criar e popular as tabelas do banco de dados:
+3.  Renomeie o arquivo '.env.example' para '.env' e atualize as credenciais de conexão com o banco.
 
-        ```bash
-        php artisan migrate --seed
-        ```
+4.  Instale as dependências do projeto:
 
-    4. Por padrão, o sistema cria via Seed um usuário inicial com as seguintes credenciais:
+    ```bash
+    composer install
+    ```
+
+5.  Execute as migrações e os seeders para criar e popular as tabelas do banco de dados:
+
+    ```bash
+    php artisan migrate --seed
+    ```
+
+6.  Por padrão, o sistema cria via seed um usuário inicial com as seguintes credenciais:
 
         - **Usuário:** admin
         - **Senha:** password
 
-    5. Atualize as credenciais de conexão com o banco no arquivo de configuração, se necessário.
-
-    6. Execute os arquivos PHP em seu servidor local ou via CLI.
+7.  Inicie o servidor:
+    ```bash
+    php artisan serve
+    ```
 
 ## Requisitos
 
--   PHP 7.4 ou superior
--   Servidor web (Apache/Nginx) ou CLI
+-   PHP 8.2.28 ou superior
+-   Laravel Installer 5.15.0
+-   Composer version 2.2.0
 -   MySQL ou MariaDB
 
 ## Contribuição
 
 Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias, correções ou novas funcionalidades.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT.
