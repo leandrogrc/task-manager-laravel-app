@@ -42,8 +42,14 @@ Este projeto é um exemplo simples desenvolvido em PHP, Laravel, MariaDB para fi
 -   **Senha:** password
 
 7.  Inicie o servidor:
+
     ```bash
     php artisan serve
+    ```
+
+8.  Acesse
+    ```bash
+    http://127.0.0.1:8000
     ```
 
 ## Tecnologias utilizadas / Versões
