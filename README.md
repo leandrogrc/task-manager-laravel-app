@@ -46,11 +46,11 @@ Este projeto é um exemplo simples desenvolvido em PHP, Laravel, MariaDB para fi
     php artisan serve
     ```
 
-## Requisitos
+## Tecnologias utilizadas / Versões
 
--   PHP 8.2.28 ou superior
--   Laravel Installer 5.15.0
--   Composer version 2.2.0
+-   PHP @ 8.2.28v
+-   Laravel Installer @ 5.15.0v
+-   Composer @ 2.2.0v
 -   MySQL ou MariaDB
 
 ## Contribuição
