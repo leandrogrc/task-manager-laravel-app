@@ -38,8 +38,8 @@ Este projeto é um exemplo simples desenvolvido em PHP, Laravel, MariaDB para fi
 
 6.  Por padrão, o sistema cria via seed um usuário inicial com as seguintes credenciais:
 
-        - **Usuário:** admin
-        - **Senha:** password
+    **Usuário:** admin
+    **Senha:** password
 
 7.  Inicie o servidor:
     ```bash
