@@ -1,18 +1,8 @@
-@if (session('success'))
-<div class="alert alert-success alert-dismissible fade show border-0 shadow-sm" role="alert">
-    <div class="d-flex align-items-center">
-        <i class="bi bi-check-circle-fill me-2"></i>
-        <div>{{ session('success') }}</div>
-    </div>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
-</div>
-@endif
-
 <!-- Header e Botão de Adicionar -->
 <div class="d-flex justify-content-between mb-4">
     <h3 class="mt-2">Tarefas</h3>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTaskModal">
-        + Adicionar Task
+        Nova Tarefa
     </button>
 </div>
 
