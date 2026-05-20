@@ -6,10 +6,10 @@ services:
 
         environment:
             - APP_NAME='Task Manager Laravel App'
-            - APP_ENV=production
+            - APP_ENV=${APP_ENV}
             - APP_KEY=base64:4T+pD+wO/XQ6oE/Fh/rE/v/Q/jY6QYjE=
-            - APP_DEBUG=false
-            - APP_URL=https://task.leandrogrc.dev
+            - APP_DEBUG=${APP_DEBUG}
+            - APP_URL=${APP_URL}
             - APP_LOCALE=pt_BR
             - APP_FALLBACK_LOCALE=pt_BR
             - APP_FAKER_LOCALE=pt_BR
