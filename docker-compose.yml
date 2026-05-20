@@ -3,12 +3,16 @@ services:
         build: .
         ports:
             - "8000:8000"
-        volumes:
-            - .:/var/www/html
-            - /var/www/html/vendor
-            - /var/www/html/node_modules
-        user: "1000:www-data"
+
         environment:
+            - APP_NAME='Task Manager Laravel App'
+            - APP_ENV=production
+            - APP_KEY=base64:4T+pD+wO/XQ6oE/Fh/rE/v/Q/jY6QYjE=
+            - APP_DEBUG=false
+            - APP_URL=https://task.leandrogrc.dev
+            - APP_LOCALE=pt_BR
+            - APP_FALLBACK_LOCALE=pt_BR
+            - APP_FAKER_LOCALE=pt_BR
             - DB_CONNECTION=${DB_CONNECTION}
             - DB_HOST=${DB_HOST}
             - DB_PORT=${DB_PORT}
