@@ -14,7 +14,7 @@ services:
             - APP_ENV=${APP_ENV:-production}
             - APP_KEY=${APP_KEY:-base64:Y08FAprvMtFXbficlXPLjA4fqcdGOif16mwlNO7MmVE=}
             - APP_DEBUG=${APP_DEBUG:-false}
-            - APP_URL=${APP_URL:-http://localhost:8000}
+            - APP_URL=${APP_URL:-https://task.leandrogrc.dev}
             - APP_LOCALE=pt_BR
             - APP_FALLBACK_LOCALE=pt_BR
             - APP_FAKER_LOCALE=pt_BR
@@ -25,6 +25,7 @@ services:
             - DB_USERNAME=${DB_USERNAME:-postgres}
             - DB_PASSWORD=${DB_PASSWORD:-}
             - SESSION_DRIVER=${SESSION_DRIVER:-file}
+            - TRUSTED_PROXIES=${TRUSTED_PROXIES:-*}
 
         networks:
             - shared_network
