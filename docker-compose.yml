@@ -4,12 +4,6 @@ services:
         ports:
             - "8000:8000"
         restart: unless-stopped
-        healthcheck:
-            test: ["CMD", "php", "-r", "file_get_contents('http://localhost:8000/up') or exit(1);"]
-            interval: 30s
-            timeout: 5s
-            retries: 3
-            start_period: 15s
         environment:
             - APP_NAME=${APP_NAME:-Task Manager Laravel App}
             - APP_ENV=${APP_ENV:-production}
