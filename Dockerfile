@@ -23,7 +23,7 @@ RUN install-php-extensions \
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Copia o Caddyfile
-COPY docker/Caddyfile /etc/caddy/Caddyfile
+COPY docker/Caddyfile /etc/frankenphp/Caddyfile
 
 WORKDIR /app
 
